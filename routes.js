@@ -1,7 +1,16 @@
-const HOME = "/"
+// Global
+const HOME = "/";
+
+// Note
+const NOTE = "/note";
+
+//user
+const LOGIN = "/login";
 
 const routes = {
-    home : HOME
-}
+  home: HOME,
+  note: NOTE,
+  login: LOGIN,
+};
 
-export default routes
+export default routes;
