@@ -15,6 +15,7 @@ app.set("view engine", "pug");
 app.use(morgan("dev"));
 app.use(bodyParser());
 app.use(cookieParser());
+app.use("/static", express.static("static"));
 
 app.use(localMiddleware);
 
