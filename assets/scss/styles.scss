@@ -1,4 +1,14 @@
 body {
-  background: red;
-  color: white;
+  display: grid;
+  justify-content: center;
+}
+
+h2 {
+  justify-self: center;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: repeat(5, 2fr 2fr 2fr);
+  height: 5vh;
 }

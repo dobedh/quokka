@@ -1,4 +1,16 @@
 body {
-  background: red;
-  color: white;
-}
+  display: grid;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+h2 {
+  justify-self: center; }
+
+.header {
+  display: grid;
+  grid-template-columns: repeat(5, 2fr 2fr 2fr);
+  height: 5vh; }
+
