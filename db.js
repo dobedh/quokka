@@ -5,13 +5,14 @@ dotenv.config();
 
 mongoose.connect(process.env.MONGO_URL, {
   useNewUrlParser: true,
-  userFindAndModify: false,
+  useFindAndModify: false,
+  useUnifiedTopology: true,
 });
 
 const db = mongoose.connection;
 
-const handleOpen = () => console.log("✅ DB connected");
-const handleError = (error) => console.log(`ERROR IN DB : ${error}`);
+const handleOpen = () => console.log("✅ DB Connected!");
+const handleError = (error) => console.log(`Error in DB : ${error}`);
 
 db.once("open", handleOpen);
 db.on("error", handleError);

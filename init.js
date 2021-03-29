@@ -1,10 +1,12 @@
 import dotenv from "dotenv";
 dotenv.config();
 
-import "./models/Note";
 import app from "./app";
+import "./db";
 
-const PORT = process.env.PORT;
+import "./models/Note";
+
+const PORT = process.env.PORT || 5000;
 
 const handleInit = () => console.log(`✅  Listening https://localhost:${PORT}`);
 
