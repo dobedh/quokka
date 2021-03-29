@@ -1,9 +1,11 @@
-import dotenv from "dotenv"
+import dotenv from "dotenv";
 dotenv.config();
 
-import app from "./app"
-const PORT = process.env.PORT
+import "./models/Note";
+import app from "./app";
 
-const handleInit = () => console.log(`✅  Listening https://localhost:${PORT}`)
+const PORT = process.env.PORT;
 
-app.listen(PORT, handleInit)
+const handleInit = () => console.log(`✅  Listening https://localhost:${PORT}`);
+
+app.listen(PORT, handleInit);

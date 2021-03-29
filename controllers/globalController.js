@@ -5,9 +5,9 @@ export const home = async (req, res) => {
     const notes = await Note.find({});
     console.log(notes);
     res.render("home", { notes });
-  } catch {
+  } catch (error) {
     console.log(error);
-    res.render("home", { notes });
+    res.render("home");
   }
 };
 
