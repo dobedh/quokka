@@ -1,9 +1,10 @@
 extend layouts/main
 
-block content 
-    h4 오늘의 상담일기
-    form(action="post") 
-        textarea(name="dairy", placeholder="새로운 쿼카 일기", cols="50", rows="10")
-    .button 
-        button 저장하기
+block content
+    .content_main
+        h4 오늘의 상담일기
+        form(action="post") 
+            textarea(name="dairy", placeholder="새로운 쿼카 일기", cols="50", rows="10")
+        .button 
+            button 저장하기
 
