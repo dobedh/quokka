@@ -2,4 +2,12 @@ extend layouts/main
 
 block content 
     .content_main
-        h4 로그인 하세요
+        form(action="post")
+            .login_group
+                label(for="user_email", value="email") 이메일 
+                input.login_input(type="text") 
+            .login_group
+                label(for="user_password") 비밀번호
+                input.login_input(type="text")
+            .login_button 
+                button.login_btn 로그인
