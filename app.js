@@ -12,6 +12,7 @@ import routes from "./routes";
 import globalRouter from "./routers/globalRouter";
 import { localMiddleware } from "./localMiddleware";
 import noteRouter from "./routers/noteRouter";
+import passport from "passport";
 
 const app = express();
 const CookieStore = MongoStore(session);
