@@ -2,12 +2,13 @@ extend layouts/main
 
 block content 
     .content_main
-        form(action="post")
+        form(action=routes.login, method="post")
             .login_group
                 label(for="user_email", value="email") 이메일 
                 input.login_input(type="text") 
             .login_group
                 label(for="user_password") 비밀번호
-                input.login_input(type="text")
+                input.login_input(type="password")
             .login_button 
                 button.login_btn 로그인
+            

@@ -1,5 +1,4 @@
 import dotenv from "dotenv";
-dotenv.config();
 import express from "express";
 import morgan from "morgan";
 import helmet from "helmet";
@@ -12,8 +11,9 @@ import routes from "./routes";
 import globalRouter from "./routers/globalRouter";
 import { localMiddleware } from "./localMiddleware";
 import noteRouter from "./routers/noteRouter";
-import passport from "passport";
 import "./passport";
+
+dotenv.config();
 
 const app = express();
 const CookieStore = MongoStore(session);

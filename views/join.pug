@@ -1,5 +1,17 @@
 extend layouts/main
 
-block content
+block content 
     .content_main
-      h4 회원가입 하세요
+        form(action=routes.join, method="post")
+            .login_group
+                label(for="user_email", value="email") 이메일 
+                input.login_input(type="text") 
+            .login_group
+                label(for="user_password") 비밀번호
+                input.login_input(type="password")
+            .login_group
+                label(for="user_password") 비밀번호 확인
+                input.login_input(type="password")
+            .login_button 
+                button.login_btn 회원가입
+            

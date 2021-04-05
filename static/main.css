@@ -2,7 +2,8 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   background: whitesmoke;
-  margin: 0; }
+  margin: 0;
+  font-family: "NotoSerifWeb", "Noto Serif CJK Kr", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; }
 
 h2 {
   justify-self: center; }
