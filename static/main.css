@@ -166,7 +166,13 @@ input {
   vertical-align: middle;
   -ms-touch-action: manipulation;
       touch-action: manipulation;
-  cursor: pointer; }
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s;
+     -moz-transition-duration: 0.4s;
+       -o-transition-duration: 0.4s;
+          transition-duration: 0.4s; }
+  .note_btn:hover {
+    background-color: #945252; }
 
 .note_group {
   margin-top: 20px;

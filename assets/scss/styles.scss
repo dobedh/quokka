@@ -141,6 +141,10 @@ input {
   vertical-align: middle;
   touch-action: manipulation;
   cursor: pointer;
+  transition-duration: 0.4s;
+  &:hover {
+    background-color: rgb(148, 82, 82);
+  }
 }
 
 .note_group {
