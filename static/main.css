@@ -53,6 +53,14 @@ a {
   font-weight: bold;
   grid-column: span 1; }
 
+.note_nav {
+  width: 70px;
+  -webkit-border-radius: 10px;
+     -moz-border-radius: 10px;
+          border-radius: 10px; }
+  .note_nav:hover {
+    background-color: #f3d9b8; }
+
 .content {
   display: grid;
   grid-template-columns: 1fr 6fr 1fr;
