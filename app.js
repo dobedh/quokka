@@ -11,7 +11,7 @@ import routes from "./routes";
 import globalRouter from "./routers/globalRouter";
 import { localMiddleware } from "./localMiddleware";
 import noteRouter from "./routers/noteRouter";
-import "./passport";
+import passport from "./passport";
 
 dotenv.config();
 
@@ -35,6 +35,8 @@ app.use(
     store: new CookieStore({ mongooseConnection: mongoose.connection }),
   })
 );
+app.use(passport.initialize());
+app.use(passport.session());
 
 app.use(localMiddleware);
 

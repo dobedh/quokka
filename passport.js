@@ -3,10 +3,24 @@ import passport from "passport";
 import KakaoStrategy from "passport-kakao";
 import FacebookStrategy from "passport-facebook";
 import User from "./models/User";
+import routes from "./routes";
 
 dotenv.config();
 
-passport.use(User.createStrategy());
+passport.use(
+  new KakaoStrategy(
+    {
+      clientID: process.env.KAKAO_ID,
+      callbackURL: `http://localhost:5000${routes.kakaoCallback}`,
+    },
+    kakaoLoginCallback
+  )
+);
 
-passport.serializeUser(User.serializeUser());
-passport.deserializeUser(User.deserializeUser());
+passport.serializeUser(function (user, done) {
+  done(null, user);
+});
+
+passport.deserializeUser(function (user, done) {
+  done(null, user);
+});

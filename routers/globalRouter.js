@@ -15,4 +15,7 @@ globalRouter.post(routes.login, home);
 globalRouter.get(routes.join, join);
 globalRouter.post(routes.join, home);
 
+//KAKAO
+globalRouter.get(routes.kakao, kakaoLogin);
+
 export default globalRouter;

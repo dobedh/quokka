@@ -57,6 +57,7 @@ a {
   &:hover {
     background-color: rgb(243, 217, 184);
   }
+  transition-duration: 0.3s;
 }
 
 .content {
@@ -109,16 +110,39 @@ input {
   font-size: 15px;
 }
 
+.login_button {
+  margin-bottom: 10px;
+}
+
 .login_btn {
   width: 100%;
   height: 40px;
   padding: 7px 14px;
+  margin-bottom: 6px;
   border: 1px solid;
   line-height: 1.6;
   border-radius: 4px;
   font-size: 15px;
   background-color: black;
   color: white;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+}
+
+.kakao_login_btn {
+  width: 100%;
+  height: 40px;
+  padding: 7px 14px;
+  margin-bottom: 6px;
+  border: 1px solid;
+  border-color: rgb(196, 196, 20);
+  line-height: 1.6;
+  border-radius: 4px;
+  font-size: 15px;
+  background-color: yellow;
+  color: black;
   text-align: center;
   vertical-align: middle;
   touch-action: manipulation;

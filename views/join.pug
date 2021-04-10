@@ -14,4 +14,8 @@ block content
                 input.login_input(type="password")
             .login_button 
                 button.login_btn 회원가입
+        form(action=routes.join, method="post")
+            .login_button 
+                button.kakao_login_btn 카카오로 시작하기
+            
             

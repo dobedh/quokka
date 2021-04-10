@@ -57,7 +57,11 @@ a {
   width: 70px;
   -webkit-border-radius: 10px;
      -moz-border-radius: 10px;
-          border-radius: 10px; }
+          border-radius: 10px;
+  -webkit-transition-duration: 0.3s;
+     -moz-transition-duration: 0.3s;
+       -o-transition-duration: 0.3s;
+          transition-duration: 0.3s; }
   .note_nav:hover {
     background-color: #f3d9b8; }
 
@@ -126,10 +130,14 @@ input {
           border-radius: 3px;
   font-size: 15px; }
 
+.login_button {
+  margin-bottom: 10px; }
+
 .login_btn {
   width: 100%;
   height: 40px;
   padding: 7px 14px;
+  margin-bottom: 6px;
   border: 1px solid;
   line-height: 1.6;
   -webkit-border-radius: 4px;
@@ -138,6 +146,26 @@ input {
   font-size: 15px;
   background-color: black;
   color: white;
+  text-align: center;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  cursor: pointer; }
+
+.kakao_login_btn {
+  width: 100%;
+  height: 40px;
+  padding: 7px 14px;
+  margin-bottom: 6px;
+  border: 1px solid;
+  border-color: #c4c414;
+  line-height: 1.6;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+  font-size: 15px;
+  background-color: yellow;
+  color: black;
   text-align: center;
   vertical-align: middle;
   -ms-touch-action: manipulation;

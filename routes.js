@@ -8,11 +8,17 @@ const NOTE = "/note";
 const LOGIN = "/login";
 const JOIN = "/join";
 
+//kakao
+const KAKAO = "/auth/kakao";
+const KAKAO_CALLBACK = "/oauth";
+
 const routes = {
   home: HOME,
   note: NOTE,
   login: LOGIN,
   join: JOIN,
+  kakao: KAKAO,
+  kakakoCallback: KAKAO_CALLBACK,
 };
 
 export default routes;
