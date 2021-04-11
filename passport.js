@@ -4,6 +4,7 @@ import KakaoStrategy from "passport-kakao";
 import FacebookStrategy from "passport-facebook";
 import User from "./models/User";
 import routes from "./routes";
+import { kakaoLoginCallback } from "./controllers/userController";
 
 dotenv.config();
 
