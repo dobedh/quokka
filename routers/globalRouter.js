@@ -1,6 +1,7 @@
 import express from "express";
+import passport from "passport";
 import { home, join, login } from "../controllers/globalController";
-import { kakaoLogin } from "../controllers/userController";
+import { kakaoLogin, postKakaoLogin } from "../controllers/userController";
 import routes from "../routes";
 
 const globalRouter = express.Router();
@@ -18,5 +19,10 @@ globalRouter.post(routes.join, home);
 
 //KAKAO
 globalRouter.get(routes.kakao, kakaoLogin);
+globalRouter.get(
+  routes.kakaoCallback,
+  passport.authenticate("kakao", { failureRedirect: "/login" }),
+  postKakaoLogin
+);
 
 export default globalRouter;

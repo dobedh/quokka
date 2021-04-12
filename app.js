@@ -7,11 +7,13 @@ import cookieParser from "cookie-parser";
 import session from "express-session";
 import MongoStore from "connect-mongo";
 import mongoose from "mongoose";
+import passport from "passport";
 import routes from "./routes";
 import globalRouter from "./routers/globalRouter";
 import { localMiddleware } from "./localMiddleware";
 import noteRouter from "./routers/noteRouter";
-import passport from "./passport";
+
+import "./passport";
 
 dotenv.config();
 

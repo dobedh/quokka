@@ -18,7 +18,7 @@ const routes = {
   login: LOGIN,
   join: JOIN,
   kakao: KAKAO,
-  kakakoCallback: KAKAO_CALLBACK,
+  kakaoCallback: KAKAO_CALLBACK,
 };
 
 export default routes;

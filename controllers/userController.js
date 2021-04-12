@@ -27,3 +27,7 @@ export const kakaoLoginCallback = async (_, __, profile, cb) => {
     return cb(error);
   }
 };
+
+export const postKakaoLogin = (req, res) => {
+  res.redirect(routes.home);
+};
