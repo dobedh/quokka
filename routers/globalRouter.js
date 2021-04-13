@@ -1,6 +1,6 @@
 import express from "express";
 import passport from "passport";
-import { home, join, login } from "../controllers/globalController";
+import { community, home, join, login } from "../controllers/globalController";
 import { kakaoLogin, postKakaoLogin } from "../controllers/userController";
 import routes from "../routes";
 
@@ -8,6 +8,9 @@ const globalRouter = express.Router();
 
 // home
 globalRouter.get(routes.home, home);
+
+//
+globalRouter.get(routes.community, community);
 
 //User_login
 globalRouter.get(routes.login, login);

@@ -7,3 +7,5 @@ export const home = (req, res) => {
 export const login = (req, res) => res.render("login");
 
 export const join = (req, res) => res.render("join");
+
+export const community = (req, res) => res.render("community");
