@@ -10,6 +10,8 @@ const COMMUNITY = "/community";
 //user
 const LOGIN = "/login";
 const JOIN = "/join";
+const LOGOUT = "/logout";
+const MYPAGE = "/mypage";
 
 //kakao
 const KAKAO = "/auth/kakao";
@@ -21,6 +23,8 @@ const routes = {
   note: NOTE,
   login: LOGIN,
   join: JOIN,
+  logout: LOGOUT,
+  mypage: MYPAGE,
   kakao: KAKAO,
   kakaoCallback: KAKAO_CALLBACK,
 };

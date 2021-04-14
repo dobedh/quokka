@@ -4,6 +4,10 @@ main
         a.note_nav(href=routes.note) 상담 일기
         a.community_nav(href=routes.community) 커뮤니티
         .user_login
-            a.login_nav(href=routes.login) 로그인
-            a.join_nav(href=routes.join) 회원가입
+            if !user
+                a.login_nav(href=routes.login) 로그인
+                a.join_nav(href=routes.join) 회원가입
+            else 
+                a.mypage_nav(href=routes.mypage) 마이페이지
+                a.logout_nav(href=routes.logout) 로그아웃
 

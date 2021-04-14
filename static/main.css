@@ -171,6 +171,8 @@ input {
   -ms-touch-action: manipulation;
       touch-action: manipulation;
   cursor: pointer; }
+  .kakao_login_btn .kakao_login_txt {
+    color: black; }
 
 .note_box {
   width: 100%;

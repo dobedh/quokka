@@ -1,7 +1,15 @@
 import express from "express";
 import passport from "passport";
-import { community, home, join, login } from "../controllers/globalController";
-import { kakaoLogin, postKakaoLogin } from "../controllers/userController";
+import {
+  community,
+  home,
+  join,
+  login,
+  kakaoLogin,
+  postKakaoLogin,
+  logout,
+  mypage,
+} from "../controllers/userController";
 import routes from "../routes";
 
 const globalRouter = express.Router();
@@ -19,6 +27,12 @@ globalRouter.post(routes.login, home);
 //User_Join
 globalRouter.get(routes.join, join);
 globalRouter.post(routes.join, home);
+
+//User_logout
+globalRouter.get(routes.logout, logout);
+
+//Mypage
+globalRouter.get(routes.mypage, mypage);
 
 //KAKAO
 globalRouter.get(routes.kakao, kakaoLogin);
