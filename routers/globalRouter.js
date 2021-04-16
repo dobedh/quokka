@@ -9,6 +9,7 @@ import {
   postKakaoLogin,
   logout,
   mypage,
+  post,
 } from "../controllers/userController";
 import routes from "../routes";
 
@@ -17,8 +18,9 @@ const globalRouter = express.Router();
 // home
 globalRouter.get(routes.home, home);
 
-//
+// COmmunity
 globalRouter.get(routes.community, community);
+globalRouter.get(routes.post, post);
 
 //User_login
 globalRouter.get(routes.login, login);

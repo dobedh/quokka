@@ -6,6 +6,7 @@ const NOTE = "/note";
 
 // Community
 const COMMUNITY = "/community";
+const POST = "/post";
 
 //user
 const LOGIN = "/login";
@@ -20,6 +21,7 @@ const KAKAO_CALLBACK = "/oauth";
 const routes = {
   home: HOME,
   community: COMMUNITY,
+  post: POST,
   note: NOTE,
   login: LOGIN,
   join: JOIN,

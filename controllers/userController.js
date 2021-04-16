@@ -13,6 +13,9 @@ export const community = (req, res) => res.render("community");
 
 export const mypage = (req, res) => res.render("mypage");
 
+// Community
+export const post = (req, res) => res.render("postWrite");
+
 // Login & Join
 
 export const login = (req, res) => res.render("login");

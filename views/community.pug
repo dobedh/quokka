@@ -2,8 +2,10 @@ extend layouts/main
 
 block content
     .content_main
-        button.btn_write 
-            a(href=routes.home) 글쓰기
         form(action=routes.home)
             input(type="text", placeholder="글을 검색하세요") 
             button 검색
+        button.btn_write 
+            a(href=routes.post) 글쓰기
+        ul
+            li 게시글

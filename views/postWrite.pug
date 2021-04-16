@@ -1,0 +1,10 @@
+extend layouts/main
+
+block content
+    .content_main
+        h4 글 작성하기
+        form(action=routes.note, method="post")
+            .note_group
+                textarea.note_box(name="post", placeholder="쿼카들과 나눌 이야기", cols="60", rows="10")
+            .note_group
+                button.note_btn 저장하기
