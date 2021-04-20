@@ -31,9 +31,10 @@ export const kakaoLogin = passport.authenticate("kakao");
 
 export const kakaoLoginCallback = async (_, __, profile, cb) => {
   const {
-    id,
-    name,
-    _json: { properties: profile_image, kakao_account: email },
+    _json: {
+      properties: { id, nickname: name, profile_image: profileImage },
+    },
+    kakao_account: { email },
   } = profile;
   try {
     const user = await User.findOne({ email });
@@ -44,7 +45,7 @@ export const kakaoLoginCallback = async (_, __, profile, cb) => {
     const newUser = await User.create({
       name,
       email,
-      avatarUrl: profile_image,
+      avatarUrl: profileImage,
       kakaoId: id,
     });
     return cb(null, newUser);
