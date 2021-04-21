@@ -10,6 +10,8 @@ import {
   logout,
   mypage,
   post,
+  facebookLogin,
+  postFacebookLogin,
 } from "../controllers/userController";
 import routes from "../routes";
 
@@ -35,6 +37,17 @@ globalRouter.get(routes.logout, logout);
 
 //Mypage
 globalRouter.get(routes.mypage, mypage);
+
+// facebook
+globalRouter.get(routes.facebook, facebookLogin);
+globalRouter.get(
+  routes.facebookCallback,
+  passport.authenticate(
+    "facebook",
+    { failureRedirect: "/login" },
+    postFacebookLogin
+  )
+);
 
 //KAKAO
 globalRouter.get(routes.kakao, kakaoLogin);

@@ -18,6 +18,11 @@ const MYPAGE = "/mypage";
 const KAKAO = "/auth/kakao";
 const KAKAO_CALLBACK = "/oauth";
 
+//facebook
+
+const FB = "/auth/facebook";
+const FB_CALLBACK = "/auth";
+
 const routes = {
   home: HOME,
   community: COMMUNITY,
@@ -29,6 +34,8 @@ const routes = {
   mypage: MYPAGE,
   kakao: KAKAO,
   kakaoCallback: KAKAO_CALLBACK,
+  facebook: FB,
+  facebookCallback: FB_CALLBACK,
 };
 
 export default routes;
