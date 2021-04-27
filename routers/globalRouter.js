@@ -23,6 +23,7 @@ globalRouter.get(routes.home, home);
 // COmmunity
 globalRouter.get(routes.community, community);
 globalRouter.get(routes.post, post);
+globalRouter.post(routes.post, postWrite);
 
 //User_login
 globalRouter.get(routes.login, login);

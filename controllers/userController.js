@@ -49,6 +49,7 @@ export const kakaoLogin = passport.authenticate("kakao");
 };*/
 
 export const kakaoLoginCallback = async (_, __, profile, cb) => {
+  console.log(profile);
   const {
     id,
     username: name,
@@ -77,4 +78,40 @@ export const kakaoLoginCallback = async (_, __, profile, cb) => {
 
 export const postKakaoLogin = (req, res) => {
   res.redirect(routes.home);
+};
+
+export const postWrite = async (req, res) => {
+  const {
+    body: { title, content, view },
+  } = req;
+  try {
+    const post = await Post({
+      title,
+      content,
+      date,
+      view,
+    });
+  }
+};
+
+export const postJoin = async (req, res, next) => {
+  const {
+    body: { name, email, password, password2 },
+  } = req;
+  if (password !== password2) {
+    res.status(400);
+    res.render("Join", { pageTitle: "Join" });
+  } else {
+    try {
+      const user = await User({
+        name,
+        email,
+      });
+      await User.register(user, password);
+      next();
+    } catch (error) {
+      console.log(error);
+      res.redirect(routes.home);
+    }
+  }
 };
