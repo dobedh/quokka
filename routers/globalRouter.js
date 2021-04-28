@@ -12,6 +12,8 @@ import {
   post,
   facebookLogin,
   postFacebookLogin,
+  newPost,
+  postPost,
 } from "../controllers/userController";
 import routes from "../routes";
 
@@ -22,8 +24,8 @@ globalRouter.get(routes.home, home);
 
 // COmmunity
 globalRouter.get(routes.community, community);
-globalRouter.get(routes.post, post);
-globalRouter.post(routes.post, postWrite);
+globalRouter.get(routes.post, newPost);
+globalRouter.post(routes.post, postPost);
 
 //User_login
 globalRouter.get(routes.login, login);

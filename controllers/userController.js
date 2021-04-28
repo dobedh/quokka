@@ -1,6 +1,7 @@
 import passport from "passport";
 import routes from "../routes";
 import User from "../models/User";
+import Post from "../models/Post";
 import Note from "../models/Note";
 
 // Global
@@ -14,7 +15,7 @@ export const community = (req, res) => res.render("community");
 export const mypage = (req, res) => res.render("mypage");
 
 // Community
-export const post = (req, res) => res.render("postWrite");
+export const newPost = (req, res) => res.render("postWrite");
 
 // Login & Join
 
@@ -80,38 +81,21 @@ export const postKakaoLogin = (req, res) => {
   res.redirect(routes.home);
 };
 
-export const postWrite = async (req, res) => {
+export const postPost = async (req, res) => {
   const {
-    body: { title, content, view },
+    body: { postTitle: title, postContent: content, view },
   } = req;
   try {
-    const post = await Post({
+    const newPost = await Post.create({
+      author,
       title,
       content,
       date,
       view,
     });
-  }
-};
-
-export const postJoin = async (req, res, next) => {
-  const {
-    body: { name, email, password, password2 },
-  } = req;
-  if (password !== password2) {
-    res.status(400);
-    res.render("Join", { pageTitle: "Join" });
-  } else {
-    try {
-      const user = await User({
-        name,
-        email,
-      });
-      await User.register(user, password);
-      next();
-    } catch (error) {
-      console.log(error);
-      res.redirect(routes.home);
-    }
+    res.redirect(routes.home);
+  } catch (error) {
+    console.log(error);
+    res.redirect(routes.home);
   }
 };
